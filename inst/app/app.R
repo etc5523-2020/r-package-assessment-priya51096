@@ -1,3 +1,7 @@
+
+
+source("UI_Select.R")
+
 library(shiny)
 library(shinythemes)
 library(readr)
@@ -9,6 +13,8 @@ library(COVID19)
 library(leaflet)
 library(htmltools)
 library(hrbrthemes)
+
+source("UI_Select.R")
 
 covid_data <- COVID19::covid19()
 
@@ -83,10 +89,8 @@ ui <- navbarPage(title = "COVID Traversing",
                  sidebarLayout(
 
                    sidebarPanel(
-                   selectInput(inputId = "country",
-                                label = "Select country",
-                                selected = "Italy",
-                                choices = unique(covid_data$administrative_area_level_1)),
+                     mySliderInput(A = "country"
+                                ),
                    sliderInput(inputId = "trajectory",
                                label = "Date Range:",
                                min = as.POSIXct("2020-01-01","%Y-%m-%d"),
@@ -169,10 +173,8 @@ ui <- navbarPage(title = "COVID Traversing",
                    width=12),
                  sidebarLayout(
                    sidebarPanel(
-                     selectInput(inputId = "state",
-                                 label = "Select Country",
-                                 selected = "Italy",
-                                 choices = unique(covid_data$administrative_area_level_1)),
+                     mySliderInput(A = "state"
+                                 ),
 
                    ),
                    mainPanel(
