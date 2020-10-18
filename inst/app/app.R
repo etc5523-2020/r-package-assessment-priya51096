@@ -30,10 +30,10 @@ covid_data <- covid_data %>% mutate(`Month Number` = month(date)) %>%
 covid_data_map <- covid_data %>% select(latitude, longitude, administrative_area_level_1) %>% distinct()
 
 
-owid_covid_data <- read_csv("Data/owid-covid-data.csv")
-swe_con <- read_csv("Data/time_series_confimed-confirmed.csv")
-swe_deaths <- read_csv("Data/time_series_deaths-deaths.csv")
-aus_state <- read_csv("Data/COVID_AU_state.csv")
+owid_covid_data <- read_csv("extdata/owid-covid-data.csv")
+swe_con <- read_csv("extdata/time_series_confimed-confirmed.csv")
+swe_deaths <- read_csv("extdata/time_series_deaths-deaths.csv")
+aus_state <- read_csv("extdata/COVID_AU_state.csv")
 
 owid_covid_data <- owid_covid_data %>% mutate(month = month(date),
                                               week = month(date)) %>%
