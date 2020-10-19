@@ -7,5 +7,5 @@
 launch_app()
 }
 \description{
-This app lauches the shiny app directly
+This app launches the shiny app directly
 }

@@ -1,7 +1,3 @@
-
-
-source("UI_Select.R")
-
 library(shiny)
 library(shinythemes)
 library(readr)
@@ -14,7 +10,6 @@ library(leaflet)
 library(htmltools)
 library(hrbrthemes)
 
-source("UI_Select.R")
 
 covid_data <- COVID19::covid19()
 
@@ -37,8 +32,7 @@ covid_data_map <- covid_data %>% select(latitude, longitude, administrative_area
 
 
 owid_covid_data <- read_csv("extdata/owid-covid-data.csv")
-swe_con <- read_csv("extdata/time_series_confimed-confirmed.csv")
-swe_deaths <- read_csv("extdata/time_series_deaths-deaths.csv")
+
 aus_state <- read_csv("extdata/COVID_AU_state.csv")
 
 owid_covid_data <- owid_covid_data %>% mutate(month = month(date),
@@ -55,12 +49,6 @@ aus_state_mon <- aus_state %>%  group_by(state,month) %>%
             Ventilator = max(vent, na.rm = TRUE),
             Recovered = max(recovered, na.rm = TRUE))
 
-swe_con <- swe_con %>% dplyr::select("Region",
-                                     "Display_Name",
-                                     "Lat",
-                                     "Long" ,
-                                     "Region_Total",
-                                     "Region_Deaths")
 
 
 ui <- navbarPage(title = "COVID Traversing",
@@ -89,15 +77,9 @@ ui <- navbarPage(title = "COVID Traversing",
                  sidebarLayout(
 
                    sidebarPanel(
-                     mySliderInput(A = "country"
+                     select_input_world_countries(A = "country", covid_data = covid_data
                                 ),
-                   sliderInput(inputId = "trajectory",
-                               label = "Date Range:",
-                               min = as.POSIXct("2020-01-01","%Y-%m-%d"),
-                               max = as.POSIXct("2020-10-05","%Y-%m-%d"),
-                               value = c(as.POSIXct("2020-02-05"), as.POSIXct("2020-09-05")),
-                               timeFormat="%Y-%m-%d", step = 1)
-
+                     date_slider_input(C = "trajectory")
                   ),
 
 
@@ -134,10 +116,8 @@ ui <- navbarPage(title = "COVID Traversing",
                     width=12),
                  sidebarLayout(
                    sidebarPanel(
-                     selectInput(inputId = "region",
-                                 label = "Select Region",
-                                 selected = "Victoria",
-                                 choices = unique(aus_state$state))
+                     select_input_austate(B = "region" , aus_state = aus_state
+                                 )
 
                    ),
                    mainPanel(
@@ -173,7 +153,7 @@ ui <- navbarPage(title = "COVID Traversing",
                    width=12),
                  sidebarLayout(
                    sidebarPanel(
-                     mySliderInput(A = "state"
+                     select_input_world_countries(A = "state" , covid_data = covid_data
                                  ),
 
                    ),
@@ -235,17 +215,7 @@ server <- function(input, output, session) {
     DatesMerge<-input$DatesMerge
     options(scipen = 999)
 
-    p1 <-  covid_data %>% dplyr::filter(administrative_area_level_1 == input$country) %>%
-      filter(date >= input$trajectory[1] & date <= input$trajectory[2]) %>%
-      ggplot(aes(x = date)) + geom_line(aes(y = confirmed), color = "blue") +
-      geom_line(aes(y = deaths), color = "red") +
-      geom_line(aes(y = recovered), color = "green") +
-      ggtitle("Overview of the COVID-19 Scenario") +
-      xlab("Date") +
-      ylab("Count of Confirmed/Recovered/Death Cases")+
-    theme_ipsum()
-
-    ggplotly(p1)
+    gg_covid_line(covid_data = covid_data, input = input)
 
   })
 
@@ -281,14 +251,7 @@ server <- function(input, output, session) {
   output$Plot2 <- renderPlotly({
 
 
-    p2 <-  aus_state %>% dplyr::filter(state == input$region) %>%
-      ggplot(aes(x = month)) +
-      geom_col(aes(y = positives), color = "orange", fill = "orange")  +
-      ggtitle("Monthly Overview of the Positive Cases in the States of Australia") + xlab("Months") +
-      ylab("Count of Positive Cases") +
-    theme_ipsum()
-
-    ggplotly(p2)
+    gg_covid_barplot(aus_state = aus_state, input = input)
 
 
 })
