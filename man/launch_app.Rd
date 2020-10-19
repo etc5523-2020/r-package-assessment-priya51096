@@ -2,10 +2,13 @@
 % Please edit documentation in R/launch_app.R
 \name{launch_app}
 \alias{launch_app}
-\title{Launching the app with a function}
+\title{Launch the shiny app from this function}
 \usage{
 launch_app()
 }
 \description{
-This app launches the shiny app directly
+The launch_app() function checks for the app.R file in the directory inst/app.
+This function looks for the particular path and stores it appDir variable.
+We have also defined a if condition which helps the user by hinting the use, if the placement of his app.R file is been correctly stored.
+If the user does not place the app.R in the correct directory(inst/app) they will receive a message regarding the incorrect directory.
 }

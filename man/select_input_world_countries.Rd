@@ -2,13 +2,20 @@
 % Please edit documentation in R/ui_functions.R
 \name{select_input_world_countries}
 \alias{select_input_world_countries}
-\title{This is on eof the funct for my app}
+\title{select_input_world_countries allows the user to select any desired country from a list of countries.}
 \usage{
-select_input_world_countries(A, covid_data)
+select_input_world_countries(selected_country_label, covid_data)
+}
+\arguments{
+\item{selected_country_label}{defines a new label everytime this function runs and save it's value in the input_id of our select input function}
+
+\item{covid_data, }{this requires the function to pass the covid_data, which will help the function recognize other select input default parameter}
 }
 \description{
-This is on eof the funct for my app
-}
-\details{
-ONe of the select input
+select_input_world_countries function allows the user to select a country from the list select of countries.
+The choices for this country are a unique list of countries available from the already existing package of COVID19.
+You can download this package from the CRAN library and find out more about it
+select_input_world_countries, function accepts and stores the country of user choice.
+The user country can be stored in as a label in the selected_country_label, which is one of the argument of our function
+The user also will have to pass covid_data which is already been store din the app.R for the second argument of this function
 }

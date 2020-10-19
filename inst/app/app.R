@@ -77,7 +77,7 @@ ui <- navbarPage(title = "COVID Traversing",
                  sidebarLayout(
 
                    sidebarPanel(
-                     select_input_world_countries(A = "country", covid_data = covid_data
+                     select_input_world_countries(selected_country_label = "country", covid_data = covid_data
                                 ),
                      date_slider_input(C = "trajectory")
                   ),
@@ -153,7 +153,7 @@ ui <- navbarPage(title = "COVID Traversing",
                    width=12),
                  sidebarLayout(
                    sidebarPanel(
-                     select_input_world_countries(A = "state" , covid_data = covid_data
+                     select_input_world_countries(selected_country_label = "state" , covid_data = covid_data
                                  ),
 
                    ),
@@ -249,7 +249,6 @@ server <- function(input, output, session) {
   })
 
   output$Plot2 <- renderPlotly({
-
 
     gg_covid_barplot(aus_state = aus_state, input = input)
 
