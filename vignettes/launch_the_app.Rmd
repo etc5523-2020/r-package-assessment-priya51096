@@ -1,0 +1,32 @@
+---
+title: "how to launch the app"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{how to launch the app}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(prikage)
+```
+
+
+## how to luanch the app 
+
+launch_app()
+
+## what the launch app does 
+
+finds the system.file and runs app.R
+
+## guidelines for usage
+
+run launch_app(), you do not have to pass any argument to this

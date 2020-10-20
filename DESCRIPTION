@@ -16,9 +16,12 @@ RoxygenNote: 7.1.1
 URL: https://github.com/etc5523-2020/r-package-assessment-priya51096.git
 BugReports: https://github.com/etc5523-2020/r-package-assessment-priya51096/issues
 Suggests: 
-    testthat
+    testthat,
+    knitr,
+    rmarkdown
 Imports: 
     tibble,
     dplyr,
     shiny,
     hrbrthemes
+VignetteBuilder: knitr
