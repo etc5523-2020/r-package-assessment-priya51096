@@ -1,5 +1,5 @@
 Package: prikage
-Title: prikage(Priya + Package), Embeds my Shiny Application & Launch its via a Function
+Title: prikage(Priya + Package), Embeds my Shiny Application & Launches its via a Function
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Priya Ravindra",
