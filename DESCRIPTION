@@ -18,5 +18,7 @@ BugReports: https://github.com/etc5523-2020/r-package-assessment-priya51096/issu
 Suggests: 
     testthat
 Imports: 
-    tibble
-    
+    tibble,
+    dplyr,
+    shiny,
+    hrbrthemes

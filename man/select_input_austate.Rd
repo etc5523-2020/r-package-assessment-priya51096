@@ -9,7 +9,7 @@ select_input_austate(selected_state_label, aus_state)
 \arguments{
 \item{selected_state_label}{defines a new label everytime this function runs and save it's value in the input_id of our select input function}
 
-\item{aus_data, }{this requires the function to pass the aus_data, which will help the function recognize other select input default parameter, for the choices}
+\item{aus_state, }{this requires the function to pass the aus_data, which will help the function recognize other select input default parameter, for the choices}
 }
 \description{
 select_input_austate function allows the user to choose from a list of all the Australia's state

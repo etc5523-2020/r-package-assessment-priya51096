@@ -20,6 +20,10 @@ with:
 devtools::install_github("etc5523-2020/r-package-assessment-priya51096")
 ```
 
+## Website Link to Package - Prikage
+
+[prikage](https://etc5523-2020.github.io/r-package-assessment-priya51096/)
+
 ## Example
 
 This is a basic example which shows you how to solve a common problem:

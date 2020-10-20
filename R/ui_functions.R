@@ -29,7 +29,7 @@ select_input_world_countries <- function(selected_country_label, covid_data) {
 #'
 #'
 #'@param selected_state_label defines a new label everytime this function runs and save it's value in the input_id of our select input function
-#'@param aus_data, this requires the function to pass the aus_data, which will help the function recognize other select input default parameter, for the choices
+#'@param aus_state, this requires the function to pass the aus_data, which will help the function recognize other select input default parameter, for the choices
 #'
 #'
 #'
