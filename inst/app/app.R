@@ -9,6 +9,7 @@ library(COVID19)
 library(leaflet)
 library(htmltools)
 library(hrbrthemes)
+library(prikage)
 
 
 covid_data <- COVID19::covid19()
@@ -79,7 +80,7 @@ ui <- navbarPage(title = "COVID Traversing",
                    sidebarPanel(
                      select_input_world_countries(selected_country_label = "country", covid_data = covid_data
                                 ),
-                     date_slider_input(C = "trajectory")
+                     date_slider_input(selected_date_range = "trajectory")
                   ),
 
 
@@ -116,7 +117,7 @@ ui <- navbarPage(title = "COVID Traversing",
                     width=12),
                  sidebarLayout(
                    sidebarPanel(
-                     select_input_austate(B = "region" , aus_state = aus_state
+                     select_input_austate(selected_state_label = "region" , aus_state = aus_state
                                  )
 
                    ),

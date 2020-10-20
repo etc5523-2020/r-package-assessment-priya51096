@@ -1,3 +1,5 @@
+covid_data <- COVID19::covid19()
+
 min = as.POSIXct("2020-01-01","%Y-%m-%d")
 max = as.POSIXct("2020-10-05","%Y-%m-%d")
 value = c(as.POSIXct("2020-02-05"), as.POSIXct("2020-09-05"))

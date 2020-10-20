@@ -2,13 +2,16 @@
 % Please edit documentation in R/ui_functions.R
 \name{date_slider_input}
 \alias{date_slider_input}
-\title{This is on eof the funct for my app}
+\title{date_slider_input allows the user to set the the date range from which the user want to produces the graphs for that selected range of date}
 \usage{
-date_slider_input(C)
+date_slider_input(selected_date_range)
+}
+\arguments{
+\item{selected_date_range}{stores the user's selected date range in this label.}
 }
 \description{
-This is on eof the funct for my app
-}
-\details{
-ONe of the select input trajectory
+date_slider_input functions, allows the user to select the desired data range.
+the selected date range is further used by our shiny app to plot the the confirmed/recovered/death cases against the selected date range by the user.
+This selected date range acts like our x axis in the shiny app.
+The user's selected date range can be stored in as a label in the selected_date_range, which is an argument of our function
 }
