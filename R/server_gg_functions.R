@@ -7,7 +7,9 @@
 #'@param covid_data is the required argument of this function, to help the function recognize the data and further work on it as per the function
 #'@param input allows the user to read the data for filtering/matching as per the function in order to produce the graph
 #'
-
+#'@import dplyr
+#'@import ggplot2
+#'@import hrbrthemes
 #'
 #'@export
 gg_covid_line <- function(covid_data, input){
@@ -33,7 +35,9 @@ gg_covid_line <- function(covid_data, input){
 #'@param aus_state is the required argument of this function, to help the function recognize the data and further work on it as per the function
 #'@param input allows the user to read the data for filtering/matching as per the function in order to produce the graph
 #'
-#'
+#'@import dplyr
+#'@import ggplot2
+#'@import hrbrthemes
 #'
 #'
 #'@export
