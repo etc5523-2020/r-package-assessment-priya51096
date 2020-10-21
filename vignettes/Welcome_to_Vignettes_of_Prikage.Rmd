@@ -80,7 +80,7 @@ The data used is in the package in mainly sourced from :
 
 ```{r, echo=TRUE, eval=FALSE}
 install.packages("COVID19")
-library(COVID19::covid19)
+COVID19::covid19()
 ```
 
 - The other dataset has been taken from [GitHub- David Barry, pappubahry](https://github.com/pappubahry/AU_COVID19), as this data is subjected to change daily, the version of the data used for the app is available in the **data folder** of the this package.

@@ -64,7 +64,7 @@ On running the package it should take you to the landing page of my app.
 The image below helps you what is the expected output when you run the launch app function. *Have Fun, Play around the app*
 
 ```{r, fig.align='center', fig.cap="The Landing Page of my Shiny App", echo=FALSE}
-knitr::include_graphics("images/land_page.PNG")
+knitr::include_graphics("man/figures/land_page.PNG")
 ```
 
 ## Feedback

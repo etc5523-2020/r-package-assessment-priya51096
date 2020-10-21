@@ -72,7 +72,7 @@ launch app function. *Have Fun, Play around the app*
 
 <div class="figure" style="text-align: center">
 
-<img src="images/land_page.PNG" alt="The Landing Page of my Shiny App" width="100%" />
+<img src="man/figures/land_page.PNG" alt="The Landing Page of my Shiny App" width="100%" />
 
 <p class="caption">
 
