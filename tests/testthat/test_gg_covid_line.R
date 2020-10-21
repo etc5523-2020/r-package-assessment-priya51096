@@ -18,7 +18,7 @@ df$trajectory <- dplyr::recode(df$trajectory,
                                "2" = as.Date("2020-09-05"))
 
 
-test_that("Test 01",{
+test_that("test for gg_covid_line",{
           expect_s3_class(object = gg_covid_line(covid_data = covid_data, input = df),
                 class = c("plotly", "htmlwidget"))
 })

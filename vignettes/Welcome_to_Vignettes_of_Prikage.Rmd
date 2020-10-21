@@ -1,0 +1,111 @@
+---
+title: "Welcome_to_Vignettes_of_Prikage"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Welcome_to_Vignettes_of_Prikage}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(prikage)
+```
+
+Hey ! Welcome to the vignettes of this app !!
+
+The goal of this vignettes, is to give you a detailed information about the prikage package.
+
+The goal of prikage is it embeds my shiny application & launches its via a function called launch_app()
+
+## How to launch the app
+
+Just run the launch_app() function of the package and you will have the app running for you !!
+
+In order to run the prikage package, you have to just run a simple code as mentioned below:
+
+
+```{r, eval=FALSE, echo=TRUE}
+library(prikage)
+launch_app()
+```
+
+The required shiny application has already been embedded my package.
+
+This package, gives the user and overview of COVID-19, by the exciting graphs embedded in this application and added user interactivity.
+
+
+## What the app does
+
+The App, is the *heart* of this package. We have a lot of exciting features available for the user in this package, each Tab of the the embedded shiny app is discussed here in detail
+
+### Overview of COVID19 Scenario Across the Globe 
+
+My application’s landing page, you can see a date slider that allows the user to see the cases of recovery, confirmation and death of the different country where cases of COVID-19 have been found. 
+
+The drop down below also helps you to see the various countries where you want to see an overview of how the selected country has been affected by COVID-19. The map also allows the user to click on the. 
+
+Yet another feature for this app is when you click on the map, on clicking on these labels of the desired country the graph of the overview of COVID-19 changes dynamically. 
+
+_Play Around and Have Fun_ !
+
+### Australia and it’s States
+The user can pick the desired state of Australia in this section of my application, where the user gets a bar chart of the COVID-19 positive cases in that state over the different months. 
+
+In addition, if you click on one of the bar chart of any month the user has picked, you will be led to another chart that informs you all about the maximum number of recovered, hospitalized, COVID-19 patients that were on the ventilator on that clicked month and the maximum number of cases that were also in the ICU.
+
+_Play Around and Have Fun_ !
+
+### WorldWide Statistics
+
+Statistical information allows the user to make inferences and study around the mean values of the data.
+
+Here the user can select the country of his choice and find the average of the total cumulative cases  of confirmed, recovered and deaths each month in the form of interactive table !!
+
+_Play Around and Have Fun_ !
+
+Above explained are the basically the entire functionality of my app, download the package and enjoy the graphics !!
+
+## Data Sources
+
+The data used is in the package in mainly sourced from :
+
+- The COVID19() package available in CRAN, you can download it as mentioned below
+
+```{r, echo=TRUE, eval=FALSE}
+install.packages("COVID19")
+library(COVID19::covid19)
+```
+
+- The other dataset has been taken from [GitHub- David Barry, pappubahry](https://github.com/pappubahry/AU_COVID19), as this data is subjected to change daily, the version of the data used for the app is available in the **data folder** of the this package.
+
+## Guidelines for using the app 
+
+There are no strict guidelines, but just a suggestion before you launch the app.
+
+Below are a few mentioned libraries, though not mandatory, but having them already installed would ensure smooth functionality of the app.
+ 
+```{r, eval=FALSE, echo=TRUE}
+install.packages(c("shiny", "shinythemes", "readr", "ggplot2", "dplyr", "plotly", "lubridate", "COVID19", "leaflet", "htmltools", "hrbrthemes"))
+```
+
+
+If you any suggestions, kindly send all the all the entries to the author of this package  at [Twitter](https://twitter.com/DingorkarPriya) or [Linkedin](https://www.linkedin.com/in/priya-dingorkar/)
+
+
+
+
+
+
+
+
+
+
+
+

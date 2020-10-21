@@ -5,11 +5,13 @@
 
 <!-- badges: start -->
 
+[![R build
+status](https://github.com/etc5523-2020/r-package-assessment-priya51096/workflows/R-CMD-check/badge.svg)](https://github.com/etc5523-2020/r-package-assessment-priya51096/actions)
 <!-- badges: end -->
 
 <div class="figure" style="text-align: center">
 
-<img src="man/logo_prikage.PNG" alt="Logo of prikage" width="25%" />
+<img src="man/figures/logo_prikage.PNG" alt="Logo of prikage" width="25%" />
 
 <p class="caption">
 
@@ -58,8 +60,7 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(prikage)
-#launch_app() 
-#Please comment out the launch_app() line
+launch_app() 
 ```
 
 ## Output

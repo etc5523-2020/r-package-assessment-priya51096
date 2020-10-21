@@ -24,5 +24,6 @@ Imports:
     dplyr,
     shiny,
     hrbrthemes,
-    ggplot2
+    ggplot2,
+    COVID19
 VignetteBuilder: knitr
