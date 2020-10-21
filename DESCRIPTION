@@ -1,16 +1,30 @@
-Package: yourPkg
-Title: What the Package Does (One Line, Title Case)
+Package: prikage
+Title: prikage(Priya + Package), Embeds my Shiny Application & Launches its via a Function
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Priya Ravindra",
+           family = "Dingorkar",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
+           email = "pdin0008@student.monash.edu",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+Description: This package prikage, is my first ever R package this packages allows the to launch my first ever shiny application through the launch_app function exported by my package, prikage. The required shiny application has already been embedded my package.This package, gives the user and overview of COVID-19, by the exciting graphs embedded in this application and added user interactivity. Download this package and know more about its detailed functionality.
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+URL: https://github.com/etc5523-2020/r-package-assessment-priya51096.git
+BugReports: https://github.com/etc5523-2020/r-package-assessment-priya51096/issues
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown
+Imports: 
+    tibble,
+    dplyr,
+    shiny,
+    hrbrthemes,
+    ggplot2,
+    COVID19,
+    plotly
+VignetteBuilder: knitr
