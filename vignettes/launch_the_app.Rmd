@@ -19,7 +19,7 @@ library(prikage)
 ```
 
 
-## how to luanch the app 
+Hey ! Welcome to the vignettes of this app !!
 
 launch_app()
 

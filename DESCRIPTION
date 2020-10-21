@@ -23,5 +23,6 @@ Imports:
     tibble,
     dplyr,
     shiny,
-    hrbrthemes
+    hrbrthemes,
+    ggplot2
 VignetteBuilder: knitr
