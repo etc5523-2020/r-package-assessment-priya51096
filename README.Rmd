@@ -18,6 +18,11 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
+```{r, fig.align='center', fig.cap="Logo of prikage", out.width="25%", echo=FALSE}
+knitr::include_graphics("man/logo_prikage.PNG")
+```
+
+
 The goal of prikage is  it embeds my shiny application & launches its via a function called launch_app()
 
 This package prikage, is my first ever R package this packages allows the to launch my first ever shiny application through the launch_app function exported by my package, prikage. 
@@ -38,7 +43,9 @@ devtools::install_github("etc5523-2020/r-package-assessment-priya51096")
 ```
 ## Website Link to Package - Prikage
 
-[prikage](https://etc5523-2020.github.io/r-package-assessment-priya51096/)
+This link provided below, for the prikage package has obtained from _pkgdown package_
+
+[prikage, Click Here](https://etc5523-2020.github.io/r-package-assessment-priya51096/)
 
 ## Example
 
@@ -47,10 +54,25 @@ This is a basic example which shows you how to solve a common problem:
 ```{r example}
 library(prikage)
 #launch_app() 
-# Please comment out the launch_app() line
+#Please comment out the launch_app() line
 ```
 
 ## Output
 
+On running the package it should take you to the landing page of my app. 
 
+The image below helps you what is the expected output when you run the launch app function. *Have Fun, Play around the app*
 
+```{r, fig.align='center', fig.cap="The Landing Page of my Shiny App", echo=FALSE}
+knitr::include_graphics("images/land_page.PNG")
+```
+
+## Feedback
+
+Hey Reader,
+
+Many Thanks for your interest in my R package
+
+If you have enjoyed using this package, let me know, feel free to drop out at [Twitter](https://twitter.com/DingorkarPriya) or [Linkedin](https://www.linkedin.com/in/priya-dingorkar/)
+
+If you have any suggestion, please a drop a message at the above mentioned link.
