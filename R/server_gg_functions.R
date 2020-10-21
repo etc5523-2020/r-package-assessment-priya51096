@@ -23,7 +23,7 @@ gg_covid_line <- function(covid_data, input){
     ylab("Count of Confirmed/Recovered/Death Cases")+
     theme_ipsum()
 
-  ggplotly(p1)
+plotly::ggplotly(p1)
 }
 
 #'@title gg_covid_barplot functions creates a bar chart that shows us the covid- 19 positive case for the user selected state of Australia
@@ -39,7 +39,6 @@ gg_covid_line <- function(covid_data, input){
 #'@import ggplot2
 #'@import hrbrthemes
 #'
-#'
 #'@export
 gg_covid_barplot <- function(aus_state, input){
 p2 <-  aus_state %>% dplyr::filter(state == input$region) %>%
@@ -49,5 +48,5 @@ p2 <-  aus_state %>% dplyr::filter(state == input$region) %>%
   ylab("Count of Positive Cases") +
   theme_ipsum()
 
-ggplotly(p2)
+plotly::ggplotly(p2)
 }
